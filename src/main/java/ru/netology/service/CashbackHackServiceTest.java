@@ -1,12 +1,12 @@
 package ru.netology.service;
 
-import org.testng.annotations.Test;
-import static org.testng.Assert.assertEquals;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 public class CashbackHackServiceTest {
 
     @Test
-    void shouldCalculateRemainIfTestFailed() {
+    public void shouldCalculateRemainIfTestFailed() {
         CashbackHackService service = new CashbackHackService();
         int amount = 2589;
 
@@ -17,7 +17,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    void shouldCalculateRemainIfAmountZero() {
+    public void shouldCalculateRemainIfAmountZero() {
         CashbackHackService service = new CashbackHackService();
         int amount = 0;
 
@@ -28,7 +28,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    void shouldCalculateRemainIfAmountNegative() {
+    public void shouldCalculateRemainIfAmountNegative() {
         CashbackHackService service = new CashbackHackService();
         int amount = -1;
 
@@ -39,7 +39,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    void shouldCalculateRemainIfAmount1() {
+    public void shouldCalculateRemainIfAmount1() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1;
 
@@ -50,7 +50,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    void shouldCalculateRemainIfAmount999() {
+    public void shouldCalculateRemainIfAmount999() {
         CashbackHackService service = new CashbackHackService();
         int amount = 999;
 
@@ -61,18 +61,18 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    void shouldCalculateRemainIfAmount1000() {
+    public void shouldCalculateRemainIfAmount1000() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1000;
 
         int actual = service.remain(amount);
-        int expected = 1000;
+        int expected = 0;
 
         assertEquals(actual, expected);
     }
 
     @Test
-    void shouldCalculateRemainIfAmount1001() {
+    public void shouldCalculateRemainIfAmount1001() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1001;
 
@@ -83,7 +83,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    void shouldCalculateRemainIfAmount2589() {
+    public void shouldCalculateRemainIfAmount2589() {
         CashbackHackService service = new CashbackHackService();
         int amount = 2589;
 
